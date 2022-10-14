@@ -7,7 +7,4 @@ Additional code from contributors and libraries in this export are licenced as f
 MIT:
 
 - glmatrix by toji (https://github.com/toji/gl-matrix)
-
-Public Domain:
-
-- ammo.js (https://github.com/kripken/ammo.js/)
+- hammer.js (https://hammerjs.github.io/)

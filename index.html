@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <title>CBDC2</title>
+    <title>copy of scroll</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-    <meta itemprop="name" content="{projectName}">
+    <meta itemprop="name" content="copy of scroll">
     <meta itemprop="description" content="made with cables">
     <meta itemprop="image" content="screenshot.png">
     <meta name="description" content="made with cables" />
@@ -35,68 +35,23 @@
             user-select: none;
         }
 
-        footer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            box-sizing: border-box;
-            width: 100vw;
-            padding: 20px;
-            text-align: right;
-            font-size: 18px;
-            color: var(--highlight-color);
-        }
-
-        footer a,
-        footer a:hover,
-        footer a:active {
-            color: var(--highlight-color);
-        }
     </style>
 
 </head>
 
 <body>
     <canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
-    <footer>
-        made with <a href='https://cables.gl'>cables</a>
-        <!-- we would greatly appreciate if you link cables somewhere on your site! and tell us your website! thanks <3 :) -->
-    </footer>
 
-    
-    <script type="text/javascript" src="js/patch.js" async></script>
-   
-    <script type="module">
+    <script type="text/javascript"  src="js/hammer.js"></script>
 
-          // Import the functions you need from the SDKs you need
+    <script type="text/javascript" src="js/libs.core.min.js"></script>
+<script type="text/javascript" src="js/cables.min.js"></script>
+<script type="text/javascript" src="js/ops.js"></script>
 
-          import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-          import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
-          import { getAuth } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js'
-          import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js'
+    <script type="text/javascript"  src="js/vargetset.js"></script>
+<script type="text/javascript"  src="js/cgl_shadermodifier.js"></script>
 
-          // TODO: Add SDKs for Firebase products that you want to use
-          // https://firebase.google.com/docs/web/setup#available-libraries
-          // Your web app's Firebase configuration
-          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 
-          const firebaseConfig = {
-            apiKey: "AIzaSyBlJUrC89B0uwJOhVBcvoAgwS7F0BSPYiw",
-            authDomain: "irobotx-ixos1.firebaseapp.com",
-            databaseURL: "https://irobotx-ixos1-default-rtdb.firebaseio.com",
-            projectId: "irobotx-ixos1",
-            storageBucket: "irobotx-ixos1.appspot.com",
-            messagingSenderId: "427315112885",
-            appId: "1:427315112885:web:e1b0860476c228ffc407fc",
-            measurementId: "G-HSB843NZX1"
-          };
-
-          // Initialize Firebase
-          const app = initializeApp(firebaseConfig);
-          const analytics = getAnalytics(app);
-    </script>
-
-    
     <script>
 
         // disable rubberband effect on mobile devices
@@ -113,8 +68,10 @@
 
         document.addEventListener('CABLES.jsLoaded', function (event) {
             CABLES.patch = new CABLES.Patch({
-                patch: CABLES.exportedPatch,
+                patchFile: 'js/copy_of_scroll.json',
                 "prefixAssetPath": "",
+                "assetPath": "assets/",
+                "jsPath": "js/",
                 "glCanvasId": "glcanvas",
                 "glCanvasResizeToWindow": true,
                 "onPatchLoaded": patchInitialized,
