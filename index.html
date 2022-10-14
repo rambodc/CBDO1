@@ -42,15 +42,9 @@
 <body>
     <canvas id="glcanvas" width="100vw" height="100vh" tabindex="1"></canvas>
 
-    <script type="text/javascript"  src="js/hammer.js"></script>
-
-    <script type="text/javascript" src="js/libs.core.min.js"></script>
-<script type="text/javascript" src="js/cables.min.js"></script>
-<script type="text/javascript" src="js/ops.js"></script>
-
-    <script type="text/javascript"  src="js/vargetset.js"></script>
-<script type="text/javascript"  src="js/cgl_shadermodifier.js"></script>
-
+    
+    <script type="text/javascript" src="js/patch.js" async></script>
+    
 
     <script>
 
@@ -68,7 +62,7 @@
 
         document.addEventListener('CABLES.jsLoaded', function (event) {
             CABLES.patch = new CABLES.Patch({
-                patchFile: 'js/copy_of_scroll.json',
+                patch: CABLES.exportedPatch,
                 "prefixAssetPath": "",
                 "assetPath": "assets/",
                 "jsPath": "js/",
