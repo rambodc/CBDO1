@@ -7,4 +7,3 @@ Additional code from contributors and libraries in this export are licenced as f
 MIT:
 
 - glmatrix by toji (https://github.com/toji/gl-matrix)
-- hammer.js (https://hammerjs.github.io/)
